@@ -18,15 +18,25 @@ main {
 }
 
 .riga:first-of-type {
-    height: 50%;
+    height: 48%;
     width: 100%;
-    margin-bottom: 5px;
+}
+
+.riga:last-child {
+    height: 48%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .prodotto {
+    position: relative;
     height: 100%;
-    width: 30%;
+    width: 20%;
     display: inline-block;
+    border: 2px solid lightblue;
+    border-radius: 20px;
 }
 
 .prodotto:first-child{
@@ -45,4 +55,43 @@ main {
     background-image: url(img/cuffie.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.prodotto :first-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 30px;
+    border-radius: 0 20px 0 0;
+}
+#rosso {
+    background-color: red;
+}
+
+#verde {
+    background-color: green;
+}
+
+#cuore{
+    height: 40px;
+    width: 40px;
+    transform: translate(-40%);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: none;
+}
+
+#cuore p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: red;
+}
+
+.prodotto:hover #cuore{
+    display: inline-block;
 }
